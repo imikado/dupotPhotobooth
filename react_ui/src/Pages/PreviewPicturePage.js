@@ -5,9 +5,8 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import storeApi from "../Apis/storeApi";
-import { Box } from "@mui/system";
 
-const url_api = "http://127.0.0.1:5000";
+const url_api = process.env.REACT_APP_FLASK_API;
 
 export default function PreviewPicturePage() {
   const [pictureShooted, setPictureShooted] = useState(null);

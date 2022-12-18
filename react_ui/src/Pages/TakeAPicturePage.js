@@ -4,12 +4,12 @@ import Webcam from "react-webcam";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import CountDown from "../Components/CountDown";
 
-import { Navigate, redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import storeApi from "../Apis/storeApi";
 import axios from "axios";
 
-const url_api = "http://127.0.0.1:5000";
+const url_api = process.env.REACT_APP_FLASK_API;
 
 const videoConstraints = {
   width: 1280,
